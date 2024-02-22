@@ -33,7 +33,10 @@ const unsubscribe = store.subscribe(() => {
   console.log("Updated state", store.getState());
 });
 
-store.dispatch(OrderCake());
+store.dispatch(OrderCake({
+    type: CAKE_ORDERED,
+    quantity: 1,
+  }));
 store.dispatch(OrderCake());
 store.dispatch(OrderCake());
 
